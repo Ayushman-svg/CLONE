@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,80 +10,85 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
         }
-        
+
         body {
-            background-color: #141414;
+            background: #141414;
             color: #fff;
-            line-height: 1.6;
         }
-        
+
         .container {
-            max-width: 1200px;
+            max-width: 1200 px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
+
         header {
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 20px 0;
-            position: sticky;
+            background: rgba (0, 0, 0, 0.8);
+            padding: 20 px 0;
+            position: fixed;
             top: 0;
-            z-index: 100;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
         }
-        
-        .header-content {
+
+        .hero img.hero-movie {
+            position: relative;
+            width: 100%;
+            height: auto;
+        }
+
+
+        .header-wrap {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .logo {
-            font-size: 28px;
-            font-weight: bold;
             color: #e50914;
+            font-size: 28 px;
+            font-weight: bold;
             text-decoration: none;
         }
-        
+
         nav ul {
-            display: flex;
             list-style: none;
+            display: flex;
         }
-        
+
         nav ul li {
-            margin-left: 20px;
+            margin-left: 20 px;
         }
-        
+
         nav ul li a {
             color: #fff;
             text-decoration: none;
-            font-size: 16px;
-            transition: color 0.3s;
+            font-size: 16 px;
         }
-        
+
         nav ul li a:hover {
             color: #e50914;
         }
-        
+
         .hero {
             height: 80vh;
-            background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)); 
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
             display: flex;
             align-items: center;
+            position: relative;
         }
-        
-        .hero-content {
-            max-width: 600px;
-        }
-         .mov{
+
+        .hero img.hero-movie {
             position: absolute;
-            top: 85px;
-            left: 0px;
-            height: 504px;
-            width: 1335px;
+            top: 85 px;
+            left: 0;
+            width: 1335 px;
+            height: 504 px;
         }
-        
+
         .btn {
             display: inline-block;
             background: #e50914;
@@ -95,136 +101,130 @@
             top: 530px;
             left: 10px;
             z-index: 1;
-            transition: background-color 0.3s;
         }
-        
+
         .btn:hover {
-            background-color: #f40612;
+            background: #f40612;
         }
-        
+
+
         .movie-section {
             margin: 50px 0;
         }
-        
+
         .section-title {
             font-size: 24px;
             margin-bottom: 20px;
             padding-bottom: 10px;
             border-bottom: 2px solid #e50914;
         }
-        
+
         .movie-row {
             display: flex;
             overflow-x: auto;
             padding: 20px 0;
-            scrollbar-width: none;
         }
-        
+
         .movie-row::-webkit-scrollbar {
             display: none;
         }
-        
+
         .movie-card {
             min-width: 200px;
             margin-right: 15px;
             transition: transform 0.3s;
         }
-        
+
         .movie-card:hover {
             transform: scale(1.05);
         }
-        
+
         .movie-poster {
             width: 100%;
             height: 300px;
             object-fit: cover;
             border-radius: 4px;
         }
-        
+
         .movie-title {
             margin-top: 10px;
             font-size: 16px;
             font-weight: bold;
         }
-        
+
         footer {
-            background-color: #000;
+            background: #000;
             padding: 40px 0;
             margin-top: 50px;
         }
-        
+
         .footer-content {
             display: flex;
-            justify-content: space-between;
             flex-wrap: wrap;
+            justify-content: space-between;
         }
-        
+
         .footer-column {
             flex: 1;
             min-width: 200px;
             margin-bottom: 20px;
         }
-        
+
         .footer-column h3 {
             margin-bottom: 15px;
             color: #e50914;
         }
-        
+
         .footer-column ul {
             list-style: none;
         }
-        
+
         .footer-column ul li {
             margin-bottom: 10px;
         }
-        
+
         .footer-column ul li a {
             color: #ddd;
             text-decoration: none;
-            transition: color 0.3s;
         }
-        
+
         .footer-column ul li a:hover {
             color: #e50914;
         }
-        
-        .copyright {
+
+        .copy {
             text-align: center;
             margin-top: 30px;
             padding-top: 20px;
             border-top: 1px solid #333;
             color: #777;
         }
-        
+
         @media (max-width: 768px) {
-            .header-content {
+            .header-wrap {
                 flex-direction: column;
                 text-align: center;
             }
-            
+
             nav ul {
                 margin-top: 15px;
                 justify-content: center;
             }
-            
-            .hero-content h1 {
-                font-size: 36px;
-            }
-            
+
             .movie-card {
                 min-width: 150px;
             }
-            
+
             .footer-content {
                 flex-direction: column;
             }
         }
-       
     </style>
 </head>
+
 <body>
     <header>
-        <div class="container header-content">
+        <div class="container header-wrap">
             <a href="#" class="logo">MOVIEFLIX</a>
             <nav>
                 <ul>
@@ -238,34 +238,33 @@
     </header>
 
     <section class="hero">
-        <div class="container hero-content">
-            <img class="mov"src="movie.webp" alt="movie">
+        <div class="container">
+            <img class="hero-movie" src="movie.webp" alt="movie">
             <a href="#" class="btn">Get Started</a>
         </div>
     </section>
-
     <section class="movie-section">
         <div class="container">
             <h2 class="section-title">Featured Today</h2>
             <div class="movie-row">
                 <div class="movie-card">
-                    <img src="The Dark Knight returns.jpg" alt="The Dark Knight Returns action movie poster" class="movie-poster">
+                    <img src="The Dark Knight returns.jpg" class="movie-poster" alt="The Dark Knight Returns">
                     <div class="movie-title">The Dark Knight Returns</div>
                 </div>
                 <div class="movie-card">
-                    <img src="Intersteller.jpg" alt="Interstellar science fiction movie poster" class="movie-poster">
+                    <img src="Intersteller.jpg" class="movie-poster" alt="Interstellar">
                     <div class="movie-title">Interstellar</div>
                 </div>
                 <div class="movie-card">
-                    <img src="Indiana Jones.jpg" alt="Indiana Jones adventure movie poster" class="movie-poster">
+                    <img src="Indiana Jones.jpg" class="movie-poster" alt="Indiana Jones">
                     <div class="movie-title">Indiana Jones</div>
                 </div>
                 <div class="movie-card">
-                    <img src="The Notebook.jpg" alt="The Notebook romantic drama movie poster" class="movie-poster">
+                    <img src="The Notebook.jpg" class="movie-poster" alt="The Notebook">
                     <div class="movie-title">The Notebook</div>
                 </div>
                 <div class="movie-card">
-                    <img src="The Conjuring.jpg" alt="The Conjuring horror movie poster" class="movie-poster">
+                    <img src="The Conjuring.jpg" class="movie-poster" alt="The Conjuring">
                     <div class="movie-title">The Conjuring</div>
                 </div>
             </div>
@@ -277,23 +276,23 @@
             <h2 class="section-title">Popular on MovieFlix</h2>
             <div class="movie-row">
                 <div class="movie-card">
-                    <img src="Stranger Things.jpg" alt="Stranger Things TV show poster" class="movie-poster">
+                    <img src="Stranger Things.jpg" class="movie-poster" alt="Stranger Things">
                     <div class="movie-title">Stranger Things</div>
                 </div>
                 <div class="movie-card">
-                    <img src="The Crown.jpg" alt="The Crown TV show poster" class="movie-poster">
+                    <img src="The Crown.jpg" class="movie-poster" alt="The Crown">
                     <div class="movie-title">The Crown</div>
                 </div>
                 <div class="movie-card">
-                    <img src="Breaking Bad.jpg" alt="Breaking Bad TV show poster" class="movie-poster">
+                    <img src="Breaking Bad.jpg" class="movie-poster" alt="Breaking Bad">
                     <div class="movie-title">Breaking Bad</div>
                 </div>
                 <div class="movie-card">
-                    <img src="Game of Thrones.jpg" alt="Game of Thrones TV show poster" class="movie-poster">
+                    <img src="Game of Thrones.jpg" class="movie-poster" alt="Game of Thrones">
                     <div class="movie-title">Game of Thrones</div>
                 </div>
                 <div class="movie-card">
-                    <img src="The Mandalorian.jpg" alt="The Mandalorian TV show poster" class="movie-poster">
+                    <img src="The Mandalorian.jpg" class="movie-poster" alt="The Mandalorian">
                     <div class="movie-title">The Mandalorian</div>
                 </div>
             </div>
@@ -305,23 +304,23 @@
             <h2 class="section-title">Trending Now</h2>
             <div class="movie-row">
                 <div class="movie-card">
-                    <img src="Dune.jpg" alt="Dune science fiction movie poster" class="movie-poster">
+                    <img src="Dune.jpg" class="movie-poster" alt="Dune">
                     <div class="movie-title">Dune</div>
                 </div>
                 <div class="movie-card">
-                    <img src="Spider-Man.jpg" alt="Spider-Man: No Way Home superhero movie poster" class="movie-poster">
+                    <img src="Spider-Man.jpg" class="movie-poster" alt="Spider-Man: No Way Home">
                     <div class="movie-title">Spider-Man: No Way Home</div>
                 </div>
                 <div class="movie-card">
-                    <img src="Top Gun Maverick.jpg" alt="Top Gun: Maverick action movie poster" class="movie-poster">
+                    <img src="Top Gun Maverick.jpg" class="movie-poster" alt="Top Gun: Maverick">
                     <div class="movie-title">Top Gun: Maverick</div>
                 </div>
                 <div class="movie-card">
-                    <img src="Balck Widow.jpg" alt="Black Widow superhero movie poster" class="movie-poster">
+                    <img src="Balck Widow.jpg" class="movie-poster" alt="Black Widow">
                     <div class="movie-title">Black Widow</div>
                 </div>
                 <div class="movie-card">
-                    <img src="The Batman.jpg" alt="The Batman superhero movie poster" class="movie-poster">
+                    <img src="The Batman.jpg" class="movie-poster" alt="The Batman">
                     <div class="movie-title">The Batman</div>
                 </div>
             </div>
@@ -333,29 +332,28 @@
             <h2 class="section-title">New Releases</h2>
             <div class="movie-row">
                 <div class="movie-card">
-                    <img src="Avatar.jpg" alt="Avatar: The Way of Water science fiction movie poster" class="movie-poster">
+                    <img src="Avatar.jpg" class="movie-poster" alt="Avatar: The Way of Water">
                     <div class="movie-title">Avatar: The Way of Water</div>
                 </div>
                 <div class="movie-card">
-                    <img src="Oppenheimer.jpg" alt="Oppenheimer biographical drama movie poster" class="movie-poster">
+                    <img src="Oppenheimer.jpg" class="movie-poster" alt="Oppenheimer">
                     <div class="movie-title">Oppenheimer</div>
                 </div>
                 <div class="movie-card">
-                    <img src="The Roses.jpg" alt="The Roses movie poster" class="movie-poster">
+                    <img src="The Roses.jpg" class="movie-poster" alt="The Roses">
                     <div class="movie-title">The Roses</div>
                 </div>
                 <div class="movie-card">
-                    <img src="John Wick.jpg" alt="John Wick: Chapter 4 action movie poster" class="movie-poster">
+                    <img src="John Wick.jpg" class="movie-poster" alt="John Wick: Chapter 4">
                     <div class="movie-title">John Wick: Chapter 4</div>
                 </div>
                 <div class="movie-card">
-                    <img src="Guardians of the Galaxy.jpg" alt="Guardians of the Galaxy Vol. 3 superhero movie poster" class="movie-poster">
+                    <img src="Guardians of the Galaxy.jpg" class="movie-poster" alt="Guardians of the Galaxy Vol. 3">
                     <div class="movie-title">Guardians of the Galaxy Vol. 3</div>
                 </div>
             </div>
         </div>
     </section>
-
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -385,10 +383,10 @@
                     </ul>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2025 MovieFlix. All rights reserved.</p>
-            </div>
+            <div class="copy">&copy; 2025 MovieFlix. All rights reserved.</div>
         </div>
     </footer>
+
 </body>
+
 </html>
